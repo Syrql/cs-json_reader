@@ -13,7 +13,7 @@ namespace ConsoleApp8
     {
         public void save(Object o)
         {
-            string pathFile = @"C:\Users\PORCHERON\Desktop\BTS\1ère Année\DEV\datas\" + o.ToString() + ".json";
+            string pathFile = @"PATH_HERE" + o.ToString() + ".json";
 
             var options = new JsonSerializerOptions { WriteIndented = true };
             string json = JsonSerializer.Serialize(o, options);
@@ -24,7 +24,7 @@ namespace ConsoleApp8
 
         public void read(List<CompteBancaire> comptes)
         {
-            string[] files = Directory.GetFiles(@"C:\Users\PORCHERON\Desktop\BTS\1ère Année\DEV\datas\");
+            string[] files = Directory.GetFiles(@"PATH_HERE");
 
             if (files.Length == 0) return;
 
